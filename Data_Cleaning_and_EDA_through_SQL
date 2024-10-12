@@ -263,7 +263,7 @@ from layoffs_staging2
 group by stage
 order by 2 desc;
 
--- 6.) Rolling Total of Monthly Layoffs
+-- 7.) Rolling Total of Monthly Layoffs
 -- Step 1. Create a Common Table Expression (CTE) named 'Rolling_Total'
 -- Step 2. Select the first 7 characters of the 'date' column (representing Year-Month) as 'Month' 
 -- Step 3. Calculate the total number of layoffs ('total_laid_off') for each month from the 'layoffs_staging2' table
@@ -285,7 +285,7 @@ select `Month`, total_off,
 sum(total_off) over( order by `Month`) as rolling_total
 from Rolling_Total;
 
--- 7.) Total number of layoffs each year based on company
+-- 8.) Total number of layoffs each year based on company
 -- Step 1. Select the 'company' name, the year extracted from the 'date' column, and the sum of 'total_laid_off' for each company and year from the 'layoffs_staging2' table
 -- Step 2. Group the results by 'company' and the year to aggregate the total number of layoffs for each company by year
 -- Step 3. Order the results in descending order based on the total number of layoffs
@@ -295,7 +295,7 @@ from layoffs_staging2
 group by company, year(`date`)
 order by 3 desc;
 
--- 8.) Top 5 Companies with the highest total layoffs for each Year
+-- 9.) Top 5 Companies with the highest total layoffs for each Year
 -- Step 1. Create a Common Table Expression (CTE) named 'company_year' with columns for company, year, and total laid off
 -- Step 2. Select the 'company', the year extracted from the 'date' column, and the sum of 'total_laid_off' from the 'layoffs_staging2' table
 -- Step 3. Group the results by 'company' and the year to aggregate the total number of layoffs for each company by year
