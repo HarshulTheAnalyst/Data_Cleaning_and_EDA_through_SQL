@@ -8,10 +8,14 @@
 1.) Removing Duplicates
 
 2.) Standardizing Data
-    2a.) Trimming company columns as they have space in the beginning of the name
-    2b.) Trimming company columns as they have space in the beginning of the name
-    2c.) Checking the Country column for any issues and rectifying it.
-    2d.) Checking the Country column for any issues and rectifying it.
+
+2a.) Trimming company columns as they have space in the beginning of the name
+
+2b.) Trimming company columns as they have space in the beginning of the name
+
+2c.) Checking the Country column for any issues and rectifying it.
+
+2d.) Checking the Country column for any issues and rectifying it.
     
 3.)  Removing and populating Null and blanks rows
 
